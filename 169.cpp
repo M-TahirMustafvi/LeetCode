@@ -16,5 +16,5 @@ public:
 int main()
 {
     Solution s1;
-    cout<<s1.majorityElement({2,2,1,1,1,2,2});
+    cout<<s1.majorityElement({2,2,1,1,1,2,2})<<endl;
 }
