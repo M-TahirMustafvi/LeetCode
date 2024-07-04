@@ -1,4 +1,7 @@
-
+# Palindrome Number, checks if a number is palindrome or not, using 
+# breaking a numbers, as we always do, reversing it and then compare
+# it to original number
+# Time_Complexity: O(log(x))
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
