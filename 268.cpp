@@ -1,3 +1,5 @@
+//Uses the approach of Gauss to find sum of first n numbers, and compares the sum with sum of array to 
+//get result!
 #include<iostream>
 #include<algorithm>
 #include<vector>
@@ -5,12 +7,12 @@ using namespace std;
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for(int i=0;i<nums.size();i++)
-        {
-            if(nums[i]!=i) return nums[i]-1;
-        }
-        return nums.size();
+        int size = nums.size();
+        int summation = size * (size + 1)/2;
+        int arrsum = 0;
+        for(int i: nums)
+            arrsum += i;
+        return summation - arrsum;
     }
 };
 
