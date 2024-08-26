@@ -46,7 +46,7 @@ public:
         return -1;
     }
 
-    //Moore's voting Algo
+    //Moore's voting Algo TC: O(n) SC: O(1)
     int majorityElementMoore(vector<int> nums) {
         int count = 0, curr = 0;
         
@@ -68,5 +68,5 @@ public:
 int main()
 {
     Solution s1;
-    cout<<s1.majorityElementMoore({2,2,1,1,1,2,2})<<endl;
+    cout<<s1.majorityElementMoore({2,2,1,1,1,2,2}) << endl;
 }
