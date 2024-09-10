@@ -1,3 +1,4 @@
+//Sub Array sum equal K!
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -5,6 +6,8 @@ class Solution {
 public:
     //Very Intutive approach, uses prefix sum technique, what it does is, stores all prefix sum with there counts,
     //now for a sum x, where x-k exists, in map, we will checkt its count and return that damn count add that to our count, and the solution will move on, in the end we will return count;
+    //TC: O(nlogn)
+    //SC: O(n)
     int subarraySum(vector<int>& nums, int k) {
         map<int, int> preSum;
         int count = 0, sum = 0;
