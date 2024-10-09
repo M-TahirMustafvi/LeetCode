@@ -1,3 +1,4 @@
+//Queue Using Stack
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -12,6 +13,8 @@ public:
         prim.push(x);
     }
     
+    //If Secondary stack is already empty, move everything from primary to secondary
+    //and then pop from secondary, it's like stack on stack simulating queues!
     int pop() {
         if(sec.empty())
         {
