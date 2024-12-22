@@ -1,4 +1,4 @@
-// zig-zag traversal
+// Zig-Zag Traversal
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -26,18 +26,17 @@ public:
         while(!nodesQueue.empty()) {
             int size = nodesQueue.size();
             vector<int> row(size);
-            for(int i = 0; i < size; i++)
-            {
+            for(int i = 0; i < size; i++) {
                 TreeNode* currNode = nodesQueue.front();
                 nodesQueue.pop();
 
-                int index = leftToRight ? i: size - 1 - i;
-                row[index] = currNode -> val;
+                int index = leftToRight ? i : size - 1 - i;
+                row[index] = currNode->val;
 
-                if(currNode -> left)
-                    nodesQueue.push(currNode -> left);
-                if(currNode -> right)
-                    nodesQueue.push(currNode -> right);
+                if(currNode->left)
+                    nodesQueue.push(currNode->left);
+                if(currNode->right)
+                    nodesQueue.push(currNode->right);
             }
             leftToRight = !leftToRight; 
             result.push_back(row);
